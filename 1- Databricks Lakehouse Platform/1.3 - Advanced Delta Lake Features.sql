@@ -5,7 +5,7 @@
 
 -- COMMAND ----------
 
-USE CATALOG hive_metastore
+USE CATALOG workspace
 
 -- COMMAND ----------
 
@@ -14,11 +14,11 @@ DESCRIBE HISTORY employees
 -- COMMAND ----------
 
 SELECT * 
-FROM employees VERSION AS OF 4
+FROM employees VERSION AS OF 5
 
 -- COMMAND ----------
 
-SELECT * FROM employees@v4
+SELECT * FROM employees@v5
 
 -- COMMAND ----------
 
@@ -30,7 +30,7 @@ SELECT * FROM employees
 
 -- COMMAND ----------
 
-RESTORE TABLE employees TO VERSION AS OF 5
+RESTORE TABLE employees TO VERSION AS OF 6
 
 -- COMMAND ----------
 
